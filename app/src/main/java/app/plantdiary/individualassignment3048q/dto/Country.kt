@@ -2,8 +2,12 @@ package app.plantdiary.individualassignment3048q.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class Country(var name: String, @SerializedName( value = "code") var code: String) {
+data class Country(var names: String, var codes: String) {
+    public final var code = names
+    public final var name = codes
     override fun toString(): String {
-        return name
+        var stringformat = name + " " + code
+        return stringformat
+
     }
 }
